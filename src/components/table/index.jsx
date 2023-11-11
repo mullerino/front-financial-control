@@ -72,11 +72,43 @@ const data = [
     address: 'Sydney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
   },
+  {
+    key: '4',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sydney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+  {
+    key: '5',
+    name: 'Joe',
+    age: 32,
+    address: 'Sydney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+  {
+    key: '6',
+    name: 'Joe x',
+    age: 32,
+    address: 'Sydney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+  {
+    key: '7',
+    name: 'Joe y',
+    age: 32,
+    address: 'Sydney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
 ]
 
 const DataTable = () => {
   return (
-    <Table columns={columns} dataSource={data} />
+    <Table 
+      columns={columns} 
+      dataSource={data} 
+      pagination={{defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['5','10', '20']}} 
+    />
   )
 }
 

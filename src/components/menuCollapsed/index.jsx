@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {
   SolutionOutlined,
   PieChartOutlined,
-  UserAddOutlined
 } from '@ant-design/icons'
 
 import { Layout, Menu } from 'antd'
@@ -19,8 +18,7 @@ function getItem(label, key, icon) {
 
 const items = [
   getItem('Histórico', '1', <PieChartOutlined />),
-  getItem('Detalhamento', '2', <SolutionOutlined />),
-  getItem('Cadastrar pessoa', '3', <UserAddOutlined />),
+  getItem('Detalhamento', '2', <SolutionOutlined />)
 ]
 
 const MenuCollapsed  = () => {
