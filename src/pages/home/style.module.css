@@ -1,21 +1,4 @@
-.layout {
-  min-height: 100vh;
-}
-
-.menuCollapsed {
-  /* Estilos para o componente MenuCollapsed */
-}
-
-.content {
-  margin: 36px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 48px;
-}
-
-.content .table {
+.table {
   width: 100%;
 }
 
@@ -26,6 +9,3 @@
   justify-content: space-between;
 }
 
-.footer {
-  text-align: center;
-}
