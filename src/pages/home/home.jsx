@@ -1,10 +1,5 @@
-import MenuCollapsed from "../../components/menuCollapsed"
 import DataTable from "../../components/table"
-import { Layout } from 'antd'
-
 import style from './style.module.css'
-
-const { Content, Footer } = Layout
 
 const columns = [
   {
@@ -125,28 +120,14 @@ const data = [
 
 const Home = () => {
   return (
-    <Layout
-      className={style.layout}
-    >
-      <MenuCollapsed />
-      <Layout>
-        <Content
-          className={style.content}
-        >
-          <div className={style.headerPage}>
-            <h1>Histórico</h1>
-          </div>
-          <div className={style.table}>
-            <DataTable columns={columns} data={data}/>
-          </div>
-        </Content>
-        <Footer
-          className={style.footer}
-        >
-          ELETREQ ©2023 Created by Leandro Müller
-        </Footer>
-      </Layout>
-    </Layout>
+    <>
+      <div className={style.headerPage}>
+        <h1>Histórico</h1>
+      </div>
+      <div className={style.table}>
+        <DataTable columns={columns} data={data} />
+      </div>
+    </>
   )
 }
 

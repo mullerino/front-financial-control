@@ -1,14 +1,10 @@
-import MenuCollapsed from "../../components/menuCollapsed"
 import RegisterPerson from "../../components/registerPerson"
 import DataTable from "../../components/table"
-import { Layout } from 'antd'
 
 import style from "./style.module.css"
 import axios from 'axios'
 
 import { useEffect, useState } from "react"
-
-const { Content, Footer } = Layout
 
 const columns = [
   {
@@ -43,7 +39,7 @@ const Historic = () => {
   }, [])
 
   const buildDataToTable = (data) => {
-    if(data) {
+    if (data) {
       const usersData = data.map(user => {
         return {
           name: user.nome,
@@ -59,29 +55,15 @@ const Historic = () => {
   }
 
   return (
-    <Layout
-      className={style.layout}
-    >
-      <MenuCollapsed />
-      <Layout>
-        <Content
-          className={style.content}
-        >
-          <div className={style.headerPage}>
-            <h1>Pessoas cadastradas</h1>
-            <RegisterPerson />
-          </div>
-          <div className={style.table}>
-            <DataTable columns={columns} data={buildDataToTable(data)} />
-          </div>
-        </Content>
-        <Footer
-          className={style.footer}
-        >
-          ELETREQ ©2023 Created by Leandro Müller
-        </Footer>
-      </Layout>
-    </Layout>
+    <>
+      <div className={style.headerPage}>
+        <h1>Pessoas cadastradas</h1>
+        <RegisterPerson />
+      </div>
+      <div className={style.tableData}>
+        <DataTable columns={columns} data={buildDataToTable(data)} />
+      </div>
+    </>
   )
 }
 
